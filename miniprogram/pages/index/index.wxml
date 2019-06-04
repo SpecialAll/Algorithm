@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container page1" aria-label = "close" wx:if="{{pageType==1}}">
+  <view class="head">
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+        <swiper-item wx:for="{{imgUrls}}"   wx:key='*this'>
+            <image src="{{item}}" class="slide-image" width="95%" />
+        </swiper-item>
+    </swiper>
+  </view>
+  <view class="P_title">
+    <view class="{{newOrold=='new' ? 'P_order P_active':'P_order'}}" bindtap="tabChange" data-id="new">
+      新综
+    </view>
+    <view class="{{newOrold=='old'? 'P_business P_active':'P_business'}}"  bindtap="tabChange" data-id="old">
+      老综
+    </view>
+  </view>
+  <view class="P_order_P" wx:if="{{newOrold=='new'}}">
+    <!-- <view class="block fourimage">
+      <block wx:for="{{source}}" wx:key="">
+          <view class="menu_item" data-index="{{index}}" bindtap='shopper'> 
+          <image src="{{item.imgsrc}}"></image>
+          <text>{{item.content}}</text>
+          </view>
+       </block>   
+    </view>  -->
+    <scroll-view class="orderPage-sideBar2" bindscrolltolower="lower" scroll-y="true" style="height:{{height}};overflow-y:scroll">
+      <block wx:for="{{source1}}" wx:key="*this">
+        <view class="menu_item" bindtap="shopper" data-sjid='{{item.sjid}}'>
+          <image src='{{item.fileid}}'></image>
+          <view class="P_message">
+            <view>{{item.name}}</view>
+            <view class="P_small">月销量： {{item.sales_volume}}</view>
+            <!-- <view hidden='false'>{{item.sjid}}</view> -->
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="P_business_P" wx:if="{{newOrold=='old'}}">
+    <!-- <view class="block fourimage">
+      <view class="menu_item" wx:for="{{source}}"  data-index="{{index}}">
+          <image src="{{item.imgsrc}}"></image>
+          <text>{{item.content}}</text>        
+       </view>   
+    </view> -->
+    <scroll-view class="orderPage-sideBar2" bindscrolltolower="lower" scroll-y="true" style="height:{{height}};overflow-y:scroll">
+      <block wx:for="{{source2}}" wx:key="*this">
+        <view class="menu_item" bindtap="shopper"  data-sjid='{{item.sjid}}'>
+          <image src='{{item.fileid}}'></image>
+          <view class="P_message">
+            <view>{{item.name}}</view>
+            <view class="P_small">上月销量： {{item.sales_volume}}</view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view> 

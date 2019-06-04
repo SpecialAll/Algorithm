@@ -1,0 +1,62 @@
+<!--my.wxml-->
+<view class="mine_container">
+  <view class="userinfo"  bindtap='jumpBtn'>
+    <view class="avatar_view">
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="username_view">                                 
+      <view class="in_username_view">
+        <text class="username">{{userInfo.nickName}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="order" bindtap="myOrderTap">
+    <view class="order_img_view">
+      <image class="order_icon" src="/images/img/order.png"></image>
+    </view>
+    <view class="my_order_view">
+      <text class="my_order">我的订单</text>
+    </view>
+    <view class="jiantou_view">
+      <image class="jiantou" src="/images/img/jiantou_grey.png"></image>
+    </view>
+  </view>
+
+  <view class="address" bindtap="myAddressTap">
+    <view class="address_img_view">
+      <image class="address_icon" src="/images/img/address.png"></image>
+    </view>
+    <view class="address_view">
+      <text class="my_address">地址管理</text>
+    </view>
+    <view class="jiantou_view">
+      <image class="jiantou" src="/images/img/jiantou_grey.png"></image>
+    </view>
+  </view>
+
+  <view class="acode" bindtap='advice'>
+    <view class="acode_img_view">
+      <image class="acode_icon" src="/images/img/acode.png"></image>
+    </view>
+    <view class="acode_view">
+      <text class="my_acode">意见反馈</text>
+    </view>
+    <view class="acode_jiantou_view">
+      <image class="jiantou" src="/images/img/jiantou_grey.png"></image>
+    </view>
+  </view> 
+<view class="income" bindtap="getMyIncome">
+  <view class="income_img_view">
+      <image class="income_icon" src="/images/img/149509134514834638.png"></image>
+    </view>
+    <view class="income_view">
+      <text class="my_income">商家电话</text>
+    </view>
+    <view class="jiantou_view">
+      <image class="jiantou" src="/images/img/jiantou_grey.png"></image>
+    </view>
+  </view>
+<view class="calling" bindtap="calling">
+      订餐举报电话：<text class="phoneColor">13619219220</text>
+ </view>
+</view>

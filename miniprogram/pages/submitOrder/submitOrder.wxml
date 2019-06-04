@@ -1,0 +1,84 @@
+<view class="orderBlock">
+  <view class="head" wx:if="{{!restaurant}}">
+    <view class="address" bindtap="toMyAddress">
+      <view class="map">
+        <view class="iconfont icon-map2">西安电子科技大学海棠公寓五号楼</view>
+        <view class="name">
+          <text>杨毅先生</text>
+          <text class="phone">13619219220</text>
+        </view>
+      </view>
+      <view class="iconfont icon-more"></view>
+    </view>    
+    <view class="time">
+      <view class="iconfont icon-time">
+        <text>立即送出</text>
+        <text>（约16:10送达）</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+<view class="proMessage"  wx:for="{{list}}" wx:key="*this"> 
+
+  <view class="list">
+    <view class="listLeft">
+      <view class="foodPic">
+        <image src="{{item.fileid}}"></image>
+      </view>
+      <view class="message">
+        <text>{{item.name}}</text>
+        <text class="price">{{item.price}}</text>
+      </view>
+    </view>
+    <view class="listRight">
+      ✖{{item.num}}
+    </view>
+  </view>
+  
+  <!-- <view class="orherPrice">
+    <text>餐盒费</text>
+    <text>¥1</text>
+  </view> -->
+  <!-- <view class="smallBorder">
+    <view class="orherPrice">
+      <text>配送</text>
+      <text>¥3</text>
+    </view>
+    
+  </view>
+  <view class="orherPrice">
+    <text>共100元</text>
+    <text>实付90（已优惠10）</text>
+  </view> -->
+</view>
+
+
+<view class="smallBorder">
+    <view class="orherPrice">
+      <text>配送</text>
+      <text>¥3</text>
+    </view>
+</view>
+
+
+<!-- <view class="orderType">
+  <text>支付方式</text>
+  <text>在线支付</text>
+</view> -->
+
+<!-- <view class="other">
+  <view>
+    <text>订单备注</text>
+    <textarea placeholder="请输入您的要求" />
+  </view>
+</view> -->
+
+<view class="submitOrder">
+  <!-- <text class="discount">已优惠¥32</text> -->
+  <text>实付 <text class="price">¥{{allMoney + 3}}</text></text>
+  <text class="submit" bindtap="submitOrder">提交订单</text>
+</view>

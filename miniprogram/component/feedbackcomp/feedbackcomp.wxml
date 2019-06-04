@@ -1,0 +1,16 @@
+<!--component/feedbackcomp/feedbackcomp.wxml-->
+
+<view class='feedbackcomp' wx:if='{{isShow}}' animation="{{animationpop}}">
+  <view class='feedbackpop' ></view>
+  <view class='feedcontent'>
+    <view class='title'>{{sendmsg.title}}</view>
+    <view class='des'>
+      {{sendmsg.des}}
+    </view>
+    <textarea class='{{iserror?"error":""}}' placeholder='{{sendmsg.placeholder}}' bindinput="textareinput" placeholder-class='phlder'></textarea>
+    <view class='btns'>
+      <button class='queren' catchtap='queren'>{{sendmsg.querenbtn}}</button>
+      <button class='cancle' catchtap='hidepop' plain>取消</button>
+    </view>
+  </view>
+</view>

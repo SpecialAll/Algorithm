@@ -1,0 +1,28 @@
+<!--start.wxml-->
+<view class="container">
+  <view class="remind-box" wx:if="{{remind}}">
+    <image class="remind-img" src="/images/more/loading.gif"></image>
+  </view>
+  <block wx:else>
+    <image class="title" src="/images/more/title8.png"></image>
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+        <image class="logo" src="{{userInfo.avatarUrl}}"></image>
+        <image class="wave" src="/images/more/wave.png" mode="aspectFill"></image>
+        <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image>
+      </view>
+      <view class="bd">
+         <image class="smalltitle" src="/images/more/shike.png"></image>
+        <view bindtap='goToIndex' >
+          <button 
+          open-type="getUserInfo"  
+          bindgetuserinfo="onGetUserInfo"
+          class="confirm-btn">
+          进入店铺
+          </button>
+        </view>
+        <text class="copyright">@食客团队制作</text>
+      </view>
+    </view>
+  </block>
+</view>

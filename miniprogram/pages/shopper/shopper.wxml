@@ -1,0 +1,78 @@
+<!--shopper.wxml-->
+<view class="container page1" wx:if="{{pageType==1}}">
+  <!-- <view class="head">
+    <view class="one">
+      <view class="saoma" bindtap="saoma" wx:if="{{!restaurant}}">
+        餐厅扫码
+        <text class="iconfont icon-saoma"></text>
+      </view>
+      <view class="address" wx:if="{{!restaurant}}">
+        <text class="iconfont icon-map icon-sanjiao" bindtap="getAddress">{{map_address}}</text> 
+      </view>
+    </view>
+    <view class="two" wx:if="{{restaurant}}">
+      <view class="iconfont icon-map2">5号桌</view>
+
+      <view bindtap="takeOut">返回外卖</view>
+    </view>
+    <view class="P_input">
+      <input placeholder="搜索您喜欢的商品名称" placeholder-style="color:#999;padding-top: 5rpx;"/>
+      <image src="../images/img/search.png" class="searchPic" catchtap="searchBtn"></image> 
+    </view>
+    
+  </view> -->
+
+
+  <view class="P_title">
+    <view class="{{orderOrBusiness=='order' ? 'P_order P_active':'P_order'}}" bindtap="tabChange" data-id="order">
+      菜单
+    </view>
+    <view class="{{orderOrBusiness=='business'?'P_business P_active':'P_business'}}"  bindtap="tabChange" data-id="business">
+      商家信息
+    </view>
+  </view>
+  
+  <view class="P_order_P" wx:if="{{orderOrBusiness=='order'}}">
+    <!-- <view class="block fourimage">
+      <view class="menu_item" wx:for="{{source}}"  data-index="{{index}}" bindtap='tofooddetails' wx:key='*this' data-spid = '{{item.spid}}'> 
+          <image src="{{item.fileid}}"></image>
+          <text>{{item.name}}</text>
+          <text>价格：{{item.price}}</text>
+       </view>   
+    </view>  -->
+
+  <scroll-view class="orderPage-sideBar2" bindscrolltolower="lower" scroll-y="true" >
+      <block wx:for="{{source}}" wx:key="*this">
+        <view class="menu_item" bindtap="tofooddetails" data-spid='{{item.spid}}' data-index="{{index}}">
+          <image src='{{item.fileid}}'></image>
+          <view class="P_message">
+            <view>{{item.name}}</view>
+            <view class="P_small">价格： {{item.price}}</view>
+            <!-- <view hidden='false'>{{item.sjid}}</view> -->
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+
+  </view>
+
+  <view class="P_business_P" wx:if="{{orderOrBusiness=='business'}}">
+    <view class="S_top">
+      <view class="S_title">
+        商家信息
+      </view>
+      <view class="iconfont icon-map">陕西省西安市长安区西安电子科技大学</view>
+      <view class="iconfont icon-time2">营业时间：6:30-23:00</view>
+      <view class="iconfont icon-car">商家提供配送服务</view>
+      <view class="iconfont icon-money">¥10元起送｜配送费¥2</view>
+    </view>
+    <view class="S_top">
+      <view class="S_title">
+        店内活动
+      </view>
+      <view class="iconfont icon-zhekou">满22减17；满50减33（在线支付专享）</view>
+      <view class="iconfont icon-zhekou">折扣商品2.6折起（在线支付专享)</view>
+      <view class="iconfont icon-zhekou">部分商品第二份半价</view>
+    </view>
+  </view>
+</view> 

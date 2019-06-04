@@ -1,0 +1,18 @@
+<view class="weui-tab__content_title" >
+      <text style='padding-left: 17px;'>食客简介</text>
+</view>
+<view>
+  <text>以后补充</text>
+</view>
+<view>
+  <text>使用本产品遇到的任何问题可联系制作者\n</text>
+  <text>制作者：杨毅</text>
+  <text>\n电话：13619219220\nQQ：2284344840\n微信：13619219220</text>
+  <text>\n制作者：张航\n</text>
+  <text>电话：****\nQQ：****\n微信：*****</text>
+  <text>\n制作者：张小虎\n</text>
+  <text>电话：****\nQQ：****\n微信：*****</text>
+</view>
+<view class="weui-tab__content_title">
+  <text>@食客团队宣</text>
+</view>
