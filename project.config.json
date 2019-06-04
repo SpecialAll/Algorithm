@@ -1,0 +1,86 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"uglifyFileName": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.1",
+	"appid": "wx8668880cb24a304e",
+	"projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%99%BB%E5%BD%95%E6%AC%A2%E8%BF%8E%E9%A1%B5%E9%9D%A2",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": -1,
+					"name": "123",
+					"pathName": "pages/start/start",
+					"query": "",
+					"scene": 1019
+				},
+				{
+					"id": -1,
+					"name": "new_address",
+					"pathName": "pages/address/new_address/new_address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "address",
+					"pathName": "pages/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "shopper",
+					"pathName": "pages/shopper/shopper",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "shoppingcar",
+					"pathName": "pages/shoppingcar/shoppingcar",
+					"scene": null
+				}
+			]
+		}
+	}
+}
